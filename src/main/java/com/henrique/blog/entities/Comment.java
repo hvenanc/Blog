@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tbl_posts")
+@Table(name = "tbl_comment")
 public class Comment {
 
     @Id
