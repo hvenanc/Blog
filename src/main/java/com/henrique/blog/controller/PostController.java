@@ -1,4 +1,4 @@
-package com.henrique.blog.config;
+package com.henrique.blog.controller;
 
 import com.henrique.blog.service.PostService;
 import com.henrique.blog.service.PostServiceImpl;

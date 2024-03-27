@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- BOOTSTRAP CSS -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/myStyle.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="posts/layout.html::header-app"></div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="login-form">
+                <h2 class="text-center mb-4">Login</h2>
+                <form action="#" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required
+                               autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" name="password" required
+                               autocomplete="off">
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="submit" class="btn btn-dark">Login</button>
+                    </div>
+                    <p class="text-center">Não tem uma conta? <a th:href="@{/cadastrar}">Criar Conta</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BOOTSTRAP JS -->
+<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
