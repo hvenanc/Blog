@@ -1,8 +1,9 @@
 package com.henrique.blog.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.data.util.Lazy;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -25,4 +26,5 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private Post post;
+
 }

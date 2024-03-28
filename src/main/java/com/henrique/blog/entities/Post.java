@@ -1,7 +1,9 @@
 package com.henrique.blog.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,8 +32,4 @@ public class Post {
             cascade = CascadeType.ALL
     )
     private List<Comment> commentListPosts = new ArrayList<>();
-
-
-
-
 }
