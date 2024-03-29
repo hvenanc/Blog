@@ -13,7 +13,7 @@
         <div class="col-md-8">
             <div class="mb-3">
                 <h1 class="mt-5">Últimas postagens</h1>
-                <a href="#" class="btn btn-success"> Novo Post</a>
+                <a th:href="@{/post/novo}" class="btn btn-success"> Novo Post</a>
             </div>
             <div th:each="post : ${posts}" class="card mb-3">
                 <div class="card-body">
