@@ -11,6 +11,7 @@
 <div th:include="~{posts/layout.html::header-app}"></div>
 <div class="container">
     <div class="row justify-content-center">
+        <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
         <div class="col-md-6">
             <div class="login-form">
                 <h2 class="text-center mb-4">Login</h2>

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -43,7 +44,7 @@ public class UserController {
     }
 
     @GetMapping("/entrar")
-    public String accessPage(HttpSession session) {
+    public String accessPage(HttpSession session, RedirectAttributes redirectAttributes) {
         Optional<User> optionalUser = userService.getUserById
                 (Long.parseLong(session.getAttribute("user_session_id").toString()));
 
@@ -52,6 +53,7 @@ public class UserController {
             return "redirect:/post/home";
         }
         else {
+            redirectAttributes.addFlashAttribute("error", "Usuário ou senha invalidos");
             return "redirect:/login";
         }
     }
